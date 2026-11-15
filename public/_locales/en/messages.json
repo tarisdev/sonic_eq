@@ -1,0 +1,6 @@
+{
+  "extDescription": {
+    "message": "10-band equalizer with presets, preamp and live spectrum for audio playing in your tabs.",
+    "description": "Extension description shown in chrome://extensions and the Web Store."
+  }
+}

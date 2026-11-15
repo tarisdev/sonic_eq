@@ -1,0 +1,131 @@
+@import '@/styles/base.css';
+
+body {
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 20px 48px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-header > div {
+  min-width: 0;
+}
+
+.page-header .brand-mark {
+  display: grid;
+  grid-template-columns: repeat(3, 4px);
+  align-items: end;
+  gap: 3px;
+  height: 28px;
+}
+
+.page-header .brand-mark i {
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+}
+
+.page-header .brand-mark i:nth-child(1) { height: 60%; }
+.page-header .brand-mark i:nth-child(2) { height: 100%; }
+.page-header .brand-mark i:nth-child(3) { height: 45%; }
+
+.page-title {
+  font-size: 19px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 16px;
+}
+
+.page .panel {
+  padding: 16px;
+}
+
+/* Spans every column of the auto-fit grid (curve editor, library…). */
+.panel-wide {
+  grid-column: 1 / -1;
+}
+
+.section-title {
+  margin-bottom: 12px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+}
+
+.field-label {
+  font-size: 13px;
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.preset-table {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.preset-table .preset-card {
+  padding: 10px;
+}
+
+/* Category headers stick to the top while the library scrolls. */
+.lib-group {
+  position: sticky;
+  top: -1px;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 2px 2px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.lib-group:first-child {
+  padding-top: 0;
+}
+
+.lib-group .count {
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.badge {
+  padding: 1px 7px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}

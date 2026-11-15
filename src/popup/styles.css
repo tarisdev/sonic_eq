@@ -1,0 +1,192 @@
+@import '@/styles/base.css';
+
+html,
+body {
+  width: 400px;
+  max-height: 600px;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 12px 12px;
+  overflow-y: auto;
+}
+
+/* ---------- header ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel), var(--bg));
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.brand-mark {
+  display: grid;
+  grid-template-columns: repeat(3, 3px);
+  align-items: end;
+  gap: 2px;
+  height: 22px;
+}
+
+.brand-mark i {
+  display: block;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+}
+
+.brand-mark i:nth-child(1) { height: 60%; }
+.brand-mark i:nth-child(2) { height: 100%; }
+.brand-mark i:nth-child(3) { height: 45%; }
+
+.brand-name {
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+.brand-sub {
+  display: block;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+/* The tagline is decorative: it yields space, the pill and buttons never do. */
+.brand > span:last-child {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.header-actions > * {
+  flex-shrink: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.status-pill .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.status-pill.on {
+  border-color: rgba(34, 197, 94, 0.5);
+  color: var(--ok);
+}
+
+.status-pill.on .dot {
+  background: var(--ok);
+  box-shadow: 0 0 8px var(--ok);
+}
+
+.status-pill.warn {
+  border-color: rgba(245, 158, 11, 0.5);
+  color: var(--warn);
+}
+
+.status-pill.warn .dot {
+  background: var(--warn);
+}
+
+/* ---------- tab status ---------- */
+
+.tab-status .domain {
+  overflow: hidden;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- visualizer ---------- */
+
+.viz-canvas {
+  display: block;
+  width: 100%;
+  height: 78px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--panel-2);
+}
+
+.viz-idle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 78px;
+  padding: 10px 12px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.footer-meta {
+  min-width: 0;
+  margin-left: auto;
+  text-align: right;
+}
+
+.compact .app-body {
+  gap: 6px;
+  padding: 8px 10px;
+}
+
+.compact .band-slider {
+  height: 74px;
+}
